@@ -1,58 +1,86 @@
-<div class="wrapper rounded bg-white">
-
-    <div class="h3">Registration Form</div>
-
-    <div class="form">
-        <div class="row">
-            <div class="col-md-6 mt-md-0 mt-3">
-                <label>First Name</label>
-                <input type="text" class="form-control" required>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form action="/submit" method="post">
+            <!-- Name -->
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
             </div>
-            <div class="col-md-6 mt-md-0 mt-3">
-                <label>Last Name</label>
-                <input type="text" class="form-control" required>
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 mt-md-0 mt-3">
-                <label>Birthday</label>
-                <input type="date" class="form-control" required>
+            <!-- Phone -->
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone">
             </div>
-            <div class="col-md-6 mt-md-0 mt-3">
-                <label>Gender</label>
-                <div class="d-flex align-items-center mt-2">
-                    <label class="option">
-                        <input type="radio" name="radio">Male
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="option ms-4">
-                        <input type="radio" name="radio">Female
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
+            <!-- Date of Birth -->
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob">
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 mt-md-0 mt-3">
-                <label>Email</label>
-                <input type="email" class="form-control" required>
+            <!-- Course Selection -->
+            <div class="form-group">
+                <label for="course">Select Course:</label>
+                <select id="course" name="course">
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Biology">Biology</option>
+                    <option value="Mathematics">Mathematics</option>
+                    <!-- Add other courses as needed -->
+                </select>
             </div>
-            <div class="col-md-6 mt-md-0 mt-3">
-                <label>Phone Number</label>
-                <input type="tel" class="form-control" required>
+            <!-- Personal Statement -->
+            <div class="form-group">
+                <label for="statement">Personal Statement:</label>
+                <textarea id="statement" name="statement" rows="5" required></textarea>
             </div>
-        </div>
-        <div class=" my-md-2 my-3">
-            <label>Subject</label>
-            <select id="sub" required>
-                <option value="" selected hidden>Choose Option</option>
-                <option value="Maths">Maths</option>
-                <option value="Science">Science</option>
-                <option value="Social">Social</option>
-                <option value="Hindi">Hindi</option>
-            </select>
-        </div>
-        <div class="btn btn-primary mt-3">Submit</div>
+            <!-- Submit Button -->
+            <div class="form-group">
+                <a href="amina form.html" class="btn btn-md text-center">Sign up</a>
+            </div>
+        </form>
     </div>
-
-</div>
+</body>
+</html>

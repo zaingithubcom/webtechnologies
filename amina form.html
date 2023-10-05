@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detailed Admission Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .form-container {
+            width: 70%;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 7px;
+        }
+
+        .form-group input[type="text"], 
+        .form-group input[type="email"], 
+        .form-group input[type="tel"], 
+        .form-group input[type="date"], 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form-row > div {
+            width: 48%;
+        }
+
+        @media only screen and (max-width: 800px) {
+            .form-container {
+                width: 95%;
+            }
+
+            .form-row {
+                flex-direction: column;
+            }
+
+            .form-row > div {
+                width: 100%;
+            }
+
+            .form-row > div:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form action="/submit" method="post">
+            <!-- Full Name -->
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <!-- Gender and Date of Birth -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob">
+                </div>
+            </div>
+
+            <!-- Address -->
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="3" required></textarea>
+            </div>
+
+            <!-- Email and Phone -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+            </div>
+
+            <!-- Previous Education -->
+            <div class="form-group">
+                <label for="previous-education">Previous Education (e.g. High School Name):</label>
+                <input type="text" id="previous-education" name="previous-education" required>
+            </div>
+
+            <!-- Subjects and Scores -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="subject1">Subject 1:</label>
+                    <input type="text" id="subject1" name="subject1">
+                </div>
+                
+                <div class="form-group">
+                    <label for="score1">Score 1:</label>
+                    <input type="text" id="score1" name="score1">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="subject2">Subject 2:</label>
+                    <input type="text" id="subject2" name="subject2">
+                </div>
+                
+                <div class="form-group">
+                    <label for="score2">Score 2:</label>
+                    <input type="text" id="score2" name="score2">
+                </div>
+            </div>
+
+            <!-- More subjects and scores can be added similarly -->
+
+            <!-- Course of Study -->
+            <div class="form-group">
+                <label for="course">Preferred Course of Study:</label>
+                <select id="course" name="course">
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Biology">Biology</option>
+                    <option value="Mathematics">Mathematics</option>
+                    <!-- Add other courses as needed -->
+                </select>
+            </div>
+
+            <!-- Personal Statement -->
+            <div class="form-group">
+                <label for="statement">Personal Statement:</label>
+                <textarea id="statement" name="statement" rows="5" required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
